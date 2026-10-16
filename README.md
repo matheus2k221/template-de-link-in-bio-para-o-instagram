@@ -2,6 +2,24 @@
 
 Página de links profissional para Instagram, desenvolvida para apresentar o trabalho, os canais sociais e os principais pontos de contato de Matheus Amorim em uma única experiência responsiva.
 
+<p align="center">
+   <a href="https://antigravity.google/product/antigravity-ide">
+      <img src="assets/icons/antigravity.svg" alt="Pictograma autoral do Google Antigravity IDE" width="52">
+   </a>
+   <br>
+   <strong>Desenvolvido com Google Antigravity IDE e Gemini</strong>
+</p>
+
+<p align="center">
+   <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white">
+   <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white">
+   <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=18191C">
+   <img alt="Gemini" src="https://img.shields.io/badge/Gemini-4285F4?style=flat-square&logo=googlegemini&logoColor=white">
+   <img alt="Python 3" src="https://img.shields.io/badge/Python%203-3776AB?style=flat-square&logo=python&logoColor=white">
+</p>
+
+<p align="center"><sub>O pictograma do Antigravity é uma ilustração original deste repositório, não um logotipo oficial do Google.</sub></p>
+
 O projeto combina uma identidade visual em grafite, tipografia editorial e navegação objetiva. A estrutura pode ser adaptada para outros profissionais, criadores de conteúdo e pequenos negócios.
 
 ## Visão geral
@@ -18,24 +36,26 @@ A página inclui perfil, biografia, links de destaque, redes sociais e compartil
 - Notificação visual após copiar o endereço.
 - Metadados básicos para mecanismos de busca e compartilhamento social.
 
-## Tecnologias
+## Tecnologias e arquitetura
 
-| Tecnologia | Utilização |
-| --- | --- |
-| HTML5 | Estrutura semântica, conteúdo e metadados. |
-| CSS3 | Layout responsivo, identidade visual, animações e efeitos. |
-| JavaScript (ES6+) | Compartilhamento, cópia para a área de transferência e notificações. |
-| Google Fonts | Tipografia Playfair Display e Plus Jakarta Sans. |
-| SVG | Ícones vetoriais incorporados diretamente na página. |
+| Camada | Arquivo ou recurso | Utilização |
+| --- | --- | --- |
+| Marcação | `index.html` / HTML5 | Estrutura semântica, conteúdo, metadados e acessibilidade. |
+| Estilos | `style.css` / CSS3 | Layout responsivo, identidade visual, animações e efeitos. |
+| Interações | `script.js` / JavaScript ES6+ | Compartilhamento, cópia do endereço, notificações e ano do rodapé. |
+| Tipografia | Google Fonts | Playfair Display e Plus Jakarta Sans. |
+| Ícones | SVG | Ícones vetoriais leves, incluindo o pictograma autoral em `assets/icons/`. |
 
 O projeto não requer framework ou instalação de dependências. As fontes são carregadas do Google Fonts; o restante da interface usa recursos nativos da plataforma web.
 
 ## Ferramentas de criação
 
-- **Google Antigravity IDE**: ambiente utilizado para desenvolver e revisar os arquivos do projeto.
-- **Gemini**: assistência de IA durante a implementação.
-- **Navegador web**: visualização e validação da interface e das interações.
-- **Python 3 `http.server`**: opção simples para servir a página localmente durante o desenvolvimento.
+- **[Google Antigravity IDE](https://antigravity.google/product/antigravity-ide)**: ambiente de desenvolvimento baseado em agentes, usado para implementar e revisar o projeto.
+- **Gemini**: assistência de IA durante a criação e o refinamento do código.
+- **Navegador web**: visualização da página e conferência das interações em diferentes tamanhos de tela.
+- **Python 3 `http.server`**: servidor local leve para testar o site sem instalar dependências.
+
+O Antigravity combina ferramentas de desenvolvimento com recursos de agentes e compreensão da base de código. O pictograma exibido neste README foi criado para representar essa ferramenta no contexto do projeto; não é uma reprodução de sua identidade visual oficial.
 
 ## Executar localmente
 
@@ -62,13 +82,19 @@ Também é possível abrir `index.html` diretamente em um navegador moderno.
 ```text
 .
 ├── assets/
+│   ├── icons/
+│   │   └── antigravity.svg
 │   └── images/
+│       ├── alex_profile.jpg
+│       └── profile.jpg
 ├── DOCUMENTACAO.md
 ├── index.html
 ├── script.js
 ├── style.css
 └── README.md
 ```
+
+Os arquivos HTML, CSS e JavaScript permanecem na raiz para que o projeto continue funcionando sem compilação, tanto ao abrir `index.html` quanto em hospedagens estáticas como GitHub Pages. Os recursos visuais ficam agrupados em `assets/`.
 
 Para detalhes técnicos adicionais, consulte [DOCUMENTACAO.md](DOCUMENTACAO.md).
 
