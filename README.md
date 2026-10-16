@@ -70,6 +70,25 @@ O Antigravity combina ferramentas de desenvolvimento com recursos de agentes e c
 
 Também é possível abrir `index.html` diretamente em um navegador moderno.
 
+## Publicar e colocar na bio do Instagram
+
+Como este repositório é público, você pode hospedar a página gratuitamente no GitHub Pages:
+
+1. Abra [Configurações do GitHub Pages](https://github.com/matheus2k221/template-de-link-in-bio-para-o-instagram/settings/pages).
+2. Em **Build and deployment**, escolha **Deploy from a branch**.
+3. Selecione a branch `main` e a pasta `/(root)`, depois clique em **Save**.
+4. Aguarde a publicação e abra: [matheus2k221.github.io/template-de-link-in-bio-para-o-instagram](https://matheus2k221.github.io/template-de-link-in-bio-para-o-instagram/).
+5. No Instagram, acesse **Perfil > Editar perfil > Links > Adicionar link externo**, cole o endereço publicado e salve.
+6. Abra o perfil público e teste o link.
+
+Sugestão de bio:
+
+> Desenvolvimento Web &amp; Mobile<br>
+> Sites e experiências digitais sob medida<br>
+> Portfólio e orçamento no link abaixo ↓
+
+**Antes de divulgar:** substitua os `href` de exemplo dos botões e das redes sociais em `index.html` pelos seus endereços reais. O [guia detalhado](DOCUMENTACAO.md) traz sugestões para cada botão, inclusive WhatsApp, loja e materiais gratuitos.
+
 ## Personalização
 
 - Edite os textos, URLs dos botões e redes sociais em `index.html`.

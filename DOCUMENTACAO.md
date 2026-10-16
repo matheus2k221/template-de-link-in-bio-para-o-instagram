@@ -141,16 +141,73 @@ Dê um duplo clique no arquivo `index.html` para abri-lo diretamente em qualquer
 
 ---
 
-## 🌐 Como Publicar Online Gratuitamente
+## 🌐 Publicar no GitHub Pages e adicionar à bio do Instagram
 
-Você pode colocar sua página no ar em menos de 2 minutos utilizando qualquer uma das seguintes opções:
+O repositório já é público e pode ser hospedado gratuitamente pelo GitHub Pages. Como `index.html`, `style.css`, `script.js` e `assets/` estão na raiz, não é necessário configurar build ou instalar dependências.
 
-1. **GitHub Pages**:
-   - Crie um repositório no seu GitHub ([github.com/matheus2k221](https://github.com/matheus2k221)).
-   - Envie os arquivos do projeto (`index.html`, `style.css`, `script.js` e a pasta `assets/`).
-   - Acesse **Settings > Pages** no repositório e ative a branch `main`. Sua página estará no ar com HTTPS gratuito!
-2. **Vercel** ou **Netlify**:
-   - Conecte o repositório ou faça o upload da pasta. O deploy é instantâneo.
+### 1. Colocar a página no ar gratuitamente
+
+1. Entre na conta GitHub que administra este repositório.
+2. Abra [Settings > Pages](https://github.com/matheus2k221/template-de-link-in-bio-para-o-instagram/settings/pages).
+3. Em **Build and deployment**, defina **Source** como **Deploy from a branch**.
+4. Em **Branch**, escolha `main` e a pasta `/(root)`; clique em **Save**.
+5. Aguarde a publicação. O GitHub exibirá o endereço da página nessa tela. Para este repositório, o endereço esperado é:
+
+  `https://matheus2k221.github.io/template-de-link-in-bio-para-o-instagram/`
+
+6. Abra o endereço no celular e no computador. Confira se a foto, o estilo e os ícones carregam corretamente.
+
+Se a publicação não aparecer, confira a aba **Actions** do repositório e veja se a execução do GitHub Pages terminou sem erros. Cada atualização enviada à branch `main` gera uma nova publicação automaticamente; pode levar alguns minutos para ficar visível.
+
+### 2. Definir o destino de cada botão
+
+Antes de divulgar a página, abra `index.html` e substitua os valores de `href` nos elementos indicados. Os `href` que começam com `#` são exemplos: não levam a uma página externa.
+
+| Botão atual | Destino recomendado | Sugestão de conteúdo |
+| --- | --- | --- |
+| **Visite Meu Site** (`btn-website`) | Seu portfólio ou site profissional. | Projetos recentes, serviços, resultados e uma forma de contato. Se ainda não tiver site, use seu perfil de projetos no GitHub. |
+| **Minha Loja Online** (`btn-shop-store`) | Loja ou catálogo que esteja ativo. | Produtos ou serviços, preços, formas de pagamento, entrega e política de troca. Se não tiver loja, renomeie o botão para **Conheça meus projetos** e direcione para trabalhos reais. |
+| **Faça Seu Orçamento** (`btn-quote`) | WhatsApp Business ou formulário de contato. | Peça à pessoa que informe o serviço desejado, prazo e detalhes do projeto. |
+| **Materiais Gratuitos** (`btn-free-resources`) | Página pública com arquivos ou recursos. | E-book, checklist, modelo, guia ou aula gratuita. Confirme que o acesso está liberado para qualquer pessoa com o link. |
+
+Exemplo de endereço para WhatsApp:
+
+```text
+https://wa.me/55DDDNUMERO?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20um%20site.
+```
+
+Troque `55DDDNUMERO` por `55` + DDD + número, usando apenas dígitos. A mensagem após `text=` está codificada para URL. Não publique o botão sem substituir o número pelo seu.
+
+Atualize também os links dos ícones sociais no mesmo `index.html`:
+
+| Ícone | Link a configurar |
+| --- | --- |
+| Instagram (`social-instagram`) | `https://www.instagram.com/seuusuario/` |
+| GitHub (`social-github`) | Seu perfil ou repositório mais relevante. |
+| LinkedIn (`social-linkedin`) | `https://www.linkedin.com/in/seuusuario/` |
+| YouTube (`social-youtube`) | `https://www.youtube.com/@seucanal` |
+
+Troque os exemplos pelos seus perfis reais. Se uma rede não for usada, remova o ícone correspondente em vez de deixar um link genérico.
+
+### 3. Adicionar o endereço à bio do Instagram
+
+1. Copie o endereço publicado no GitHub Pages.
+2. No Instagram, abra seu perfil e toque em **Editar perfil**.
+3. Entre em **Links** e escolha **Adicionar link externo**.
+4. Cole o endereço do GitHub Pages. Como título, você pode usar **Portfólio | Matheus Amorim**.
+5. Salve, volte ao perfil e toque no link para confirmar que abre a página.
+
+Sugestão de texto para a bio:
+
+> Desenvolvimento Web & Mobile<br>
+> Sites e experiências digitais sob medida<br>
+> Portfólio e orçamento no link abaixo ↓
+
+O nome de algumas opções pode variar conforme a versão do Instagram. Se o perfil já tiver outros links, deixe o portfólio em uma posição fácil de encontrar.
+
+### 4. Publicar alterações nos links
+
+Depois de editar e testar os `href` no `index.html`, envie as alterações para a branch `main`. O GitHub Pages atualizará o site; aguarde alguns minutos e teste novamente os botões na página pública.
 
 ---
 
