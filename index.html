@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Amorim | Desenvolvimento Web &amp; Mobile</title>
+  <meta name="description" content="Desenvolvimento web & mobile que impulsiona sua evolução digital. Código inteligente, design funcional, resultados reais.">
+  <meta name="theme-color" content="#1C1D20">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Matheus Amorim | Desenvolvimento Web &amp; Mobile">
+  <meta property="og:description" content="Desenvolvimento web & mobile que impulsiona sua evolução digital. Código inteligente, design funcional, resultados reais.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+
+  <!-- Favicon com iniciais MA (Matheus Amorim) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231C1D20'/><text x='50%' y='55%' font-family='serif' font-weight='600' font-size='45' fill='white' text-anchor='middle' dominant-baseline='middle'>MA</text></svg>">
+
+  <!-- Google Fonts: Playfair Display (Serif sofisticada) + Plus Jakarta Sans (Sans moderna e limpa) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow (iluminação suave e sutil) -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Contêiner Principal -->
+  <main class="profile-container" id="profile-container">
+    
+    <!-- Botão de Compartilhar (Topo) -->
+    <header class="top-nav">
+      <button class="share-btn" id="shareBtn" aria-label="Compartilhar perfil" title="Compartilhar perfil">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+      </button>
+    </header>
+
+    <!-- SEÇÃO SUPERIOR (Cabeçalho do Perfil) -->
+    <section class="profile-header">
+      <div class="avatar-wrapper">
+        <img 
+          src="assets/images/profile.jpg" 
+          alt="Foto de perfil de Matheus Amorim" 
+          class="avatar-img"
+          id="profile-avatar"
+          loading="eager"
+        >
+      </div>
+
+      <h1 class="profile-name">Matheus Amorim</h1>
+      
+      <p class="profile-bio">
+        Desenvolvimento web &amp; mobile que impulsiona sua evolução digital.<br>
+        <span class="bio-tagline">Código inteligente, design funcional, resultados reais.</span>
+      </p>
+    </section>
+
+    <!-- SEÇÃO DE BOTÕES (Chamada para Ação) -->
+    <section class="links-section" aria-label="Links em destaque">
+      <ul class="links-list">
+        <li>
+          <a href="#meu-site" class="link-card" id="btn-website" role="button">
+            <span class="link-card-text">Visite Meu Site</span>
+          </a>
+        </li>
+        <li>
+          <a href="#loja-online" class="link-card" id="btn-shop-store" role="button">
+            <span class="link-card-text">Minha Loja Online</span>
+          </a>
+        </li>
+        <li>
+          <a href="#orcamento" class="link-card" id="btn-quote" role="button">
+            <span class="link-card-text">Faça Seu Orçamento</span>
+          </a>
+        </li>
+        <li>
+          <a href="#materiais-gratuitos" class="link-card" id="btn-free-resources" role="button">
+            <span class="link-card-text">Materiais Gratuitos</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SEÇÃO INFERIOR (Redes Sociais) -->
+    <footer class="socials-section" aria-label="Redes sociais de Matheus Amorim">
+      <div class="social-icons-group">
+        <!-- Instagram -->
+        <a 
+          href="https://instagram.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-btn" 
+          id="social-instagram"
+          aria-label="Instagram de Matheus Amorim"
+          title="Instagram"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a 
+          href="https://github.com/matheus2k221" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-btn" 
+          id="social-github"
+          aria-label="GitHub de Matheus Amorim"
+          title="GitHub"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a 
+          href="https://linkedin.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-btn" 
+          id="social-linkedin"
+          aria-label="LinkedIn de Matheus Amorim"
+          title="LinkedIn"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a 
+          href="https://youtube.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-btn" 
+          id="social-youtube"
+          aria-label="YouTube de Matheus Amorim"
+          title="YouTube"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Rodapé discreto em português -->
+      <p class="footer-note">© <span id="currentYear"></span> Matheus Amorim. Todos os direitos reservados.</p>
+    </footer>
+
+  </main>
+
+  <!-- Notificação Toast -->
+  <div class="toast" id="toastNotification" role="alert" aria-live="polite">
+    <span class="toast-message" id="toastMessage">Link copiado para a área de transferência!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

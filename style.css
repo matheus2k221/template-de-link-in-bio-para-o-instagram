@@ -1,0 +1,446 @@
+/* ==========================================================================
+   Alex Morgan - Perfil Profissional Sofisticado
+   Design System: Grafite Suave, Riscos Translúcidos & Tipografia de Luxo
+   ========================================================================== */
+
+/* --- Variáveis de Design / Tokens --- */
+:root {
+  --color-bg-base: #1C1D20;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8F9FA;
+  --color-surface-subtle: rgba(255, 255, 255, 0.05);
+  
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #9CA3AF;
+  --color-text-muted: #6B7280;
+  --color-text-card: #18191C;
+  
+  --color-border-card: #E5E7EB;
+  --color-border-hover: #D1D5DB;
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+
+  /* Tipografia Sofisticada */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --radius-button: 12px;
+  --radius-circle: 50%;
+  
+  --shadow-avatar: 0 12px 30px -4px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  --shadow-button-idle: 0 4px 16px 0 rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.12);
+  --shadow-button-hover: 0 10px 24px -2px rgba(0, 0, 0, 0.32), 0 2px 6px rgba(0, 0, 0, 0.15);
+  --shadow-social-hover: 0 6px 18px -2px rgba(0, 0, 0, 0.35);
+
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Reset & Configurações Básicas --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-base);
+  /* Fundo Grafite Suave com Riscos Verticais Translúcidos e Baixo Contraste */
+  background-image: 
+    /* Iluminação suave e difusa no topo */
+    radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.038) 0%, rgba(28, 29, 32, 0) 65%),
+    /* Vinheta suave e aveludada nas bordas */
+    radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 55%, rgba(18, 19, 21, 0.35) 100%),
+    /* Riscas verticais translúcidas elegantes (pinstripes finos e discretos) */
+    repeating-linear-gradient(
+      to right,
+      transparent 0px,
+      transparent 22px,
+      rgba(255, 255, 255, 0.015) 22px,
+      rgba(255, 255, 255, 0.015) 23px,
+      transparent 23px,
+      transparent 44px
+    ),
+    /* Textura grafite vertical de baixíssimo contraste (aveludada e suave) */
+    repeating-linear-gradient(
+      90deg,
+      #1b1c1f 0px,
+      #1b1c1f 2px,
+      #1e1f22 2px,
+      #1e1f22 4px,
+      #191a1d 4px,
+      #191a1d 6px,
+      #1d1e21 6px,
+      #1d1e21 8px
+    );
+  background-attachment: fixed;
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  padding: 44px 20px;
+}
+
+/* Spot de luz ambiente ultramacio */
+.ambient-glow {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 900px;
+  height: 550px;
+  background: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.03) 0%, rgba(28, 29, 32, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Contêiner Principal do Perfil --- */
+.profile-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: pageFadeIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Navegação Superior (Compartilhar) --- */
+.top-nav {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  z-index: 2;
+}
+
+.share-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-smooth);
+}
+
+.share-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.share-btn:active {
+  transform: scale(0.96);
+}
+
+/* --- Cabeçalho do Perfil --- */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 34px;
+  width: 100%;
+}
+
+.avatar-wrapper {
+  width: 136px;
+  height: 136px;
+  margin-bottom: 22px;
+  border-radius: var(--radius-circle);
+  position: relative;
+  padding: 3px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.05));
+  box-shadow: var(--shadow-avatar);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  overflow: hidden;
+}
+
+.avatar-wrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-circle);
+  object-fit: cover;
+  transform: scale(1.7);
+  transform-origin: 50% 18%;
+  display: block;
+  user-select: none;
+  filter: contrast(0.98) saturate(0.96);
+}
+
+/* Nome com Tipografia Serifada de Luxo */
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-text-primary);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+/* Subtítulo / Bio Sofisticada */
+.profile-bio {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+.bio-tagline {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  letter-spacing: 0.015em;
+}
+
+/* --- Seção de Botões (CTA) --- */
+.links-section {
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 17px 24px;
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border-card);
+  border-radius: var(--radius-button);
+  color: var(--color-text-card);
+  font-family: var(--font-body);
+  font-size: 16.5px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: var(--shadow-button-idle);
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+}
+
+/* Efeito sutil de brilho/overlay */
+.link-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.02);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.link-card:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.link-card:hover::before {
+  opacity: 1;
+}
+
+.link-card:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-button-idle);
+  background-color: #EFEFEF;
+  border-color: #9CA3AF;
+}
+
+.link-card-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Acessibilidade no foco */
+.link-card:focus-visible,
+.social-btn:focus-visible,
+.share-btn:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 3px;
+}
+
+/* --- Seção de Redes Sociais --- */
+.socials-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-circle);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-subtle);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #D1D5DB;
+  text-decoration: none;
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+}
+
+.social-btn svg {
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.social-btn:hover {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #18191C;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-social-hover);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.08);
+}
+
+.social-btn:active {
+  transform: translateY(0);
+  background-color: #E5E7EB;
+}
+
+/* --- Rodapé --- */
+.footer-note {
+  font-family: var(--font-body);
+  font-size: 13px;
+  letter-spacing: 0.015em;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* --- Notificação Toast --- */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background-color: #FFFFFF;
+  color: #18191C;
+  padding: 12px 22px;
+  border-radius: 9999px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Adaptações Responsivas --- */
+@media (max-width: 480px) {
+  body {
+    padding: 34px 16px;
+  }
+
+  .avatar-wrapper {
+    width: 124px;
+    height: 124px;
+    margin-bottom: 18px;
+  }
+
+  .profile-name {
+    font-size: 33px;
+  }
+
+  .profile-bio {
+    font-size: 14.5px;
+    padding: 0 4px;
+  }
+
+  .link-card {
+    padding: 15px 20px;
+    font-size: 15.5px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-icons-group {
+    gap: 14px;
+  }
+}
