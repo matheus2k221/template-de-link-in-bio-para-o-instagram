@@ -1,5 +1,5 @@
 /**
- * Minimalist Profile - Alex Morgan
+ * Perfil profissional - Matheus Amorim
  * Interactive features & subtle micro-interactions
  */
 

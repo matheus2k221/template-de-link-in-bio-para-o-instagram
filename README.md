@@ -104,7 +104,7 @@ Sugestão de bio:
 │   ├── icons/
 │   │   └── antigravity.svg
 │   └── images/
-│       ├── alex_profile.jpg
+│       ├── reference_profile.jpg
 │       └── profile.jpg
 ├── DOCUMENTACAO.md
 ├── index.html

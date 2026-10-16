@@ -119,7 +119,7 @@ linktree matheus portfolio/
 └── assets/
     └── images/
         ├── profile.jpg          # Foto profissional de Matheus Amorim
-        └── alex_profile.jpg     # Foto original preservada
+        └── reference_profile.jpg # Foto de referência do template, não exibida no perfil
 ```
 
 ---
